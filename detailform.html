@@ -1,0 +1,2801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Personal Profile</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+rel="stylesheet"
+>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   COLORS
+===================================================== */
+
+:root {
+
+    --dark-brown: #3b281f;
+    --brown: #624638;
+    --brown-light: #927768;
+
+    --cream: #f5eee6;
+    --white: #fffdf9;
+
+    --light-beige: #eee2d5;
+    --border: #ded2c5;
+
+    --text: #382a23;
+    --muted: #95857a;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    min-height: 100vh;
+}
+
+
+/* Background decoration */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 550px;
+    height: 550px;
+
+    border-radius: 50%;
+
+    background: #e8d8c6;
+
+    left: -280px;
+    top: -280px;
+
+    opacity: 0.5;
+
+    z-index: -1;
+}
+
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: #e3d0bb;
+
+    right: -220px;
+    bottom: -220px;
+
+    opacity: 0.5;
+
+    z-index: -1;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page {
+
+    min-height: 100vh;
+
+    padding: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+
+    width: 1200px;
+
+    max-width: 100%;
+
+    min-height: 720px;
+
+    display: grid;
+
+    grid-template-columns: 36% 64%;
+
+    background: var(--white);
+
+    border-radius: 26px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(60, 40, 29, 0.15);
+}
+
+
+/* =====================================================
+   LEFT PANEL
+===================================================== */
+
+.left {
+
+    background:
+        linear-gradient(
+            145deg,
+            #604438,
+            #38261e
+        );
+
+    color: white;
+
+    padding: 42px 46px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Decorative circles */
+
+.left::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 470px;
+    height: 470px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 50%;
+
+    right: -300px;
+    top: 70px;
+}
+
+
+.left::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    border-radius: 50%;
+
+    right: -180px;
+    top: 145px;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.brand-dot {
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #dbc2a5;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.left-content {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.eyebrow {
+
+    color: #c8b3a4;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.left h1 {
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(52px, 4vw, 70px);
+
+    font-weight: 700;
+
+    line-height: 1.02;
+
+    letter-spacing: -2px;
+
+    margin: 28px 0 24px;
+}
+
+
+.left h1 span {
+
+    display: block;
+
+    color: #d9bea1;
+
+    font-weight: 500;
+}
+
+
+.left-description {
+
+    max-width: 390px;
+
+    color: #c7b6aa;
+
+    font-size: 17px;
+
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.steps {
+
+    margin-top: 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 23px;
+}
+
+
+.step {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    opacity: 0.4;
+
+    transition: 0.3s ease;
+}
+
+
+.step.active {
+
+    opacity: 1;
+}
+
+
+.step.completed {
+
+    opacity: 0.75;
+}
+
+
+.step-number {
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 14px;
+
+    flex-shrink: 0;
+
+    transition: 0.3s;
+}
+
+
+.step.active .step-number {
+
+    background: #dbc2a5;
+
+    color: var(--dark-brown);
+
+    border-color: #dbc2a5;
+}
+
+
+.step.completed .step-number {
+
+    background: rgba(219,194,165,0.2);
+
+    color: #dbc2a5;
+
+    border-color: #dbc2a5;
+}
+
+
+.step strong {
+
+    display: block;
+
+    font-size: 16px;
+}
+
+
+.step small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #a99588;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   PRIVACY
+===================================================== */
+
+.privacy {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #a89588;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RIGHT PANEL
+===================================================== */
+
+.right {
+
+    padding: 48px 65px;
+
+    position: relative;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 35px;
+}
+
+
+.step-label {
+
+    color: var(--brown-light);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.header h2 {
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 58px;
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+
+    margin-top: 10px;
+
+    color: #392a23;
+}
+
+
+.header p {
+
+    color: var(--muted);
+
+    font-size: 19px;
+
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   PROGRESS BAR
+===================================================== */
+
+.progress {
+
+    width: 130px;
+
+    height: 5px;
+
+    background: #e8e1da;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-top: 12px;
+}
+
+
+.progress-bar {
+
+    width: 33.33%;
+
+    height: 100%;
+
+    background: var(--brown);
+
+    transition: width 0.4s ease;
+}
+
+
+/* =====================================================
+   FORM STEPS
+===================================================== */
+
+.form-step {
+
+    display: none;
+
+    animation: slideIn 0.35s ease;
+}
+
+
+.form-step.active {
+
+    display: block;
+}
+
+
+@keyframes slideIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(15px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+
+
+/* =====================================================
+   PHOTO BOX
+===================================================== */
+
+.photo-box {
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    background: #fdfbf8;
+
+    margin-bottom: 32px;
+}
+
+
+.photo-circle {
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    border: 1px dashed #bba08b;
+
+    background: #eee1d3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+
+.photo-circle span {
+
+    font-size: 38px;
+
+    color: #94715e;
+}
+
+
+.photo-circle img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.photo-title {
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.photo-description {
+
+    font-size: 14px;
+
+    color: var(--muted);
+
+    margin-bottom: 10px;
+}
+
+
+.upload {
+
+    font-size: 14px;
+
+    color: var(--brown);
+
+    font-weight: 700;
+
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+.section-number {
+
+    color: #a48770;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.section-title h3 {
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 26px;
+
+    margin-bottom: 28px;
+}
+
+
+.row.three {
+
+    grid-template-columns:
+        1.2fr
+        1fr
+        0.8fr;
+}
+
+
+/* =====================================================
+   INPUT FIELD
+===================================================== */
+
+.field {
+
+    position: relative;
+
+    min-height: 68px;
+}
+
+
+.field input,
+.field select,
+.field textarea {
+
+    width: 100%;
+
+    border: none;
+
+    border-bottom: 1px solid var(--border);
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 20px;
+
+    transition: 0.25s;
+}
+
+
+.field input,
+.field select {
+
+    height: 68px;
+
+    padding-top: 22px;
+}
+
+
+.field textarea {
+
+    height: 110px;
+
+    padding-top: 27px;
+
+    resize: none;
+}
+
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+
+    border-bottom-color: var(--brown);
+}
+
+
+/* =====================================================
+   FLOATING LABEL
+===================================================== */
+
+.field label {
+
+    position: absolute;
+
+    top: 23px;
+
+    left: 0;
+
+    color: #927f73;
+
+    font-size: 16px;
+
+    pointer-events: none;
+
+    transition: 0.25s;
+}
+
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:focus + label,
+.field textarea:not(:placeholder-shown) + label {
+
+    top: 2px;
+
+    font-size: 12px;
+
+    color: var(--brown);
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.date-field label {
+
+    top: 2px;
+
+    font-size: 12px;
+
+    color: var(--brown);
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   GENDER
+===================================================== */
+
+.gender-field {
+
+    min-height: 68px;
+}
+
+
+.gender-label {
+
+    display: block;
+
+    font-size: 12px;
+
+    color: var(--brown);
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+.gender-options {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.gender-options input {
+
+    display: none;
+}
+
+
+.gender-options label {
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    padding: 11px 20px;
+
+    font-size: 15px;
+
+    color: #7c6a5e;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.gender-options input:checked + label {
+
+    background: var(--brown);
+
+    color: white;
+
+    border-color: var(--brown);
+}
+
+
+/* =====================================================
+   TEXT AREA
+===================================================== */
+
+.full {
+
+    margin-bottom: 28px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navigation {
+
+    border-top: 1px solid #eee6df;
+
+    margin-top: 40px;
+
+    padding-top: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.required {
+
+    color: #9c8c82;
+
+    font-size: 13px;
+}
+
+
+.required span {
+
+    color: #9d6047;
+}
+
+
+.buttons {
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.btn {
+
+    border: none;
+
+    border-radius: 11px;
+
+    padding: 15px 22px;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.btn-back {
+
+    background: transparent;
+
+    color: var(--brown);
+
+    border: 1px solid var(--border);
+}
+
+
+.btn-back:hover {
+
+    background: #f6eee5;
+}
+
+
+.btn-next {
+
+    background: var(--dark-brown);
+
+    color: white;
+
+    min-width: 145px;
+
+    justify-content: center;
+
+    box-shadow:
+        0 8px 20px rgba(59,40,31,0.18);
+}
+
+
+.btn-next:hover {
+
+    background: #563b2f;
+
+    transform: translateY(-2px);
+}
+
+
+.arrow {
+
+    width: 29px;
+
+    height: 29px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.12);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =====================================================
+   SUCCESS
+===================================================== */
+
+.success {
+
+    display: none;
+
+    text-align: center;
+
+    padding-top: 120px;
+}
+
+
+.success.active {
+
+    display: block;
+
+    animation: slideIn 0.4s ease;
+}
+
+
+.success-icon {
+
+    width: 80px;
+
+    height: 80px;
+
+    border-radius: 50%;
+
+    background: #eadfd2;
+
+    color: var(--brown);
+
+    font-size: 36px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: auto;
+}
+
+
+.success h2 {
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    margin-top: 22px;
+}
+
+
+.success p {
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   SUCCESS BUTTONS
+===================================================== */
+
+.success-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+
+.edit-btn {
+
+    background: transparent;
+
+    color: var(--brown);
+
+    border: 1px solid var(--border);
+
+    box-shadow: none;
+
+    padding: 14px 22px;
+}
+
+
+.edit-btn:hover {
+
+    background: #f6eee5;
+
+    transform: translateY(-1px);
+}
+
+
+.done-btn {
+
+    background: var(--dark-brown);
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 28px;
+}
+
+
+.done-btn:hover {
+
+    background: #543a2e;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width: 950px) {
+
+    .container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .left {
+
+        min-height: 450px;
+    }
+
+
+    .right {
+
+        padding: 45px;
+    }
+
+}
+
+
+@media(max-width: 600px) {
+
+    .page {
+
+        padding: 10px;
+    }
+
+
+    .left {
+
+        padding: 30px 25px;
+    }
+
+
+    .left h1 {
+
+        font-size: 44px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .left-description {
+
+        font-size: 16px;
+    }
+
+
+    .right {
+
+        padding: 30px 22px;
+    }
+
+
+    .header h2 {
+
+        font-size: 38px;
+    }
+
+
+    .header p {
+
+        font-size: 16px;
+    }
+
+
+    .progress {
+
+        display: none;
+    }
+
+
+    .row,
+    .row.three {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .field input,
+    .field select,
+    .field textarea {
+
+        font-size: 18px;
+    }
+
+
+    .field label {
+
+        font-size: 15px;
+    }
+
+
+    .section-title h3 {
+
+        font-size: 19px;
+    }
+
+
+    .navigation {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+    }
+
+
+    .buttons {
+
+        width: 100%;
+    }
+
+
+    .btn {
+
+        flex: 1;
+
+        justify-content: center;
+
+        font-size: 16px;
+    }
+
+
+    .success-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .edit-btn,
+    .done-btn {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<div class="container">
+
+
+<!-- =====================================================
+     LEFT PANEL
+===================================================== -->
+
+<div class="left">
+
+
+    <div class="brand">
+
+        <span class="brand-dot"></span>
+
+        PERSONAL PROFILE
+
+    </div>
+
+
+
+    <div class="left-content">
+
+
+        <div class="eyebrow">
+
+            PERSONAL INFORMATION
+
+        </div>
+
+
+        <h1>
+
+            Tell us a little
+
+            <span>about yourself.</span>
+
+        </h1>
+
+
+        <p class="left-description">
+
+            Share a few details about yourself.
+            It only takes a minute and helps us
+            create a more personalized experience.
+
+        </p>
+
+
+
+        <!-- STEPS -->
+
+        <div class="steps">
+
+
+            <div
+                class="step active"
+                data-step="1"
+            >
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div>
+
+                    <strong>
+                        Personal Details
+                    </strong>
+
+                    <small>
+                        Basic information
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="step"
+                data-step="2"
+            >
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div>
+
+                    <strong>
+                        Contact
+                    </strong>
+
+                    <small>
+                        Your contact information
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="step"
+                data-step="3"
+            >
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div>
+
+                    <strong>
+                        Address
+                    </strong>
+
+                    <small>
+                        Where you live
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="privacy">
+
+        ◇ &nbsp; Your information is private and secure.
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     RIGHT PANEL
+===================================================== -->
+
+<div class="right">
+
+
+    <!-- HEADER -->
+
+    <div
+        class="header"
+        id="header"
+    >
+
+        <div>
+
+
+            <div
+                class="step-label"
+                id="stepLabel"
+            >
+
+                STEP 01 OF 03
+
+            </div>
+
+
+            <h2 id="stepTitle">
+
+                Personal Details
+
+            </h2>
+
+
+            <p id="stepDescription">
+
+                Let's start with some basic information.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="progress">
+
+            <div
+                class="progress-bar"
+                id="progressBar"
+            ></div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         FORM
+    ================================================= -->
+
+    <form id="profileForm">
+
+
+
+        <!-- =================================================
+             STEP 1
+        ================================================= -->
+
+        <div
+            class="form-step active"
+            data-form-step="1"
+        >
+
+
+            <!-- PHOTO -->
+
+            <div class="photo-box">
+
+
+                <div
+                    class="photo-circle"
+                    id="photoCircle"
+                >
+
+                    <span>+</span>
+
+                </div>
+
+
+                <div>
+
+                    <div class="photo-title">
+
+                        Profile photo
+
+                    </div>
+
+
+                    <div class="photo-description">
+
+                        Optional · JPG or PNG · Max 5MB
+
+                    </div>
+
+
+                    <label
+                        for="photo"
+                        class="upload"
+                    >
+
+                        Upload photo
+
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="photo"
+                        accept="image/*"
+                        hidden
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- BASIC INFORMATION -->
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    01
+                </span>
+
+                <h3>
+                    Basic information
+                </h3>
+
+            </div>
+
+
+
+            <div class="row">
+
+
+                <div class="field">
+
+                    <input
+                        type="text"
+                        id="firstName"
+                        placeholder=" "
+                        required
+                    >
+
+                    <label>
+                        First name
+                    </label>
+
+                </div>
+
+
+
+                <div class="field">
+
+                    <input
+                        type="text"
+                        id="lastName"
+                        placeholder=" "
+                        required
+                    >
+
+                    <label>
+                        Last name
+                    </label>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="row">
+
+
+                <!-- DOB -->
+
+                <div class="field date-field">
+
+                    <label>
+                        Date of birth
+                    </label>
+
+                    <input
+                        type="date"
+                        id="dob"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- GENDER -->
+
+                <div class="gender-field">
+
+                    <span class="gender-label">
+                        GENDER
+                    </span>
+
+
+                    <div class="gender-options">
+
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            id="female"
+                            value="Female"
+                        >
+
+                        <label for="female">
+                            Female
+                        </label>
+
+
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            id="male"
+                            value="Male"
+                        >
+
+                        <label for="male">
+                            Male
+                        </label>
+
+
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            id="other"
+                            value="Other"
+                        >
+
+                        <label for="other">
+                            Other
+                        </label>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- NAVIGATION -->
+
+            <div class="navigation">
+
+
+                <div class="required">
+
+                    <span>*</span>
+                    Required fields
+
+                </div>
+
+
+                <div class="buttons">
+
+
+                    <button
+                        type="button"
+                        class="btn btn-next"
+                        onclick="nextStep()"
+                    >
+
+                        Next
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             STEP 2
+        ================================================= -->
+
+        <div
+            class="form-step"
+            data-form-step="2"
+        >
+
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    02
+                </span>
+
+                <h3>
+                    Contact information
+                </h3>
+
+            </div>
+
+
+
+            <div class="row">
+
+
+                <div class="field">
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder=" "
+                        required
+                    >
+
+                    <label>
+                        Email address
+                    </label>
+
+                </div>
+
+
+
+                <div class="field">
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder=" "
+                        maxlength="10"
+                        required
+                    >
+
+                    <label>
+                        Phone number
+                    </label>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="row">
+
+
+                <div class="field">
+
+                    <input
+                        type="tel"
+                        id="alternatePhone"
+                        placeholder=" "
+                        maxlength="10"
+                    >
+
+                    <label>
+                        Alternate phone number
+                    </label>
+
+                </div>
+
+
+
+                <div class="field">
+
+                    <input
+                        type="text"
+                        id="occupation"
+                        placeholder=" "
+                    >
+
+                    <label>
+                        Occupation
+                    </label>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    02
+                </span>
+
+                <h3>
+                    Additional information
+                </h3>
+
+            </div>
+
+
+
+            <div class="field full">
+
+                <textarea
+                    id="about"
+                    placeholder=" "
+                ></textarea>
+
+                <label>
+                    Tell us something about yourself
+                </label>
+
+            </div>
+
+
+
+            <div class="navigation">
+
+
+                <div class="required">
+
+                    <span>*</span>
+                    Required fields
+
+                </div>
+
+
+                <div class="buttons">
+
+
+                    <button
+                        type="button"
+                        class="btn btn-back"
+                        onclick="previousStep()"
+                    >
+
+                        ← Back
+
+                    </button>
+
+
+
+                    <button
+                        type="button"
+                        class="btn btn-next"
+                        onclick="nextStep()"
+                    >
+
+                        Next
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             STEP 3
+        ================================================= -->
+
+        <div
+            class="form-step"
+            data-form-step="3"
+        >
+
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    03
+                </span>
+
+                <h3>
+                    Address
+                </h3>
+
+            </div>
+
+
+
+            <div class="field full">
+
+                <input
+                    type="text"
+                    id="address"
+                    placeholder=" "
+                    required
+                >
+
+                <label>
+                    Street address
+                </label>
+
+            </div>
+
+
+
+            <br>
+
+
+
+            <div class="row three">
+
+
+                <div class="field">
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder=" "
+                        required
+                    >
+
+                    <label>
+                        City
+                    </label>
+
+                </div>
+
+
+
+                <div class="field">
+
+                    <label
+                        style="
+                            top:2px;
+                            font-size:12px;
+                            color:#624638;
+                            font-weight:700;
+                        "
+                    >
+                        State
+                    </label>
+
+
+                    <select
+                        id="state"
+                        required
+                    >
+
+                        <option value="">
+                            Select state
+                        </option>
+
+                        <option>Punjab</option>
+                        <option>Haryana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Chandigarh</option>
+                        <option>Delhi</option>
+                        <option>Rajasthan</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Gujarat</option>
+                        <option>Karnataka</option>
+                        <option>Tamil Nadu</option>
+                        <option>Kerala</option>
+                        <option>West Bengal</option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="field">
+
+                    <input
+                        type="text"
+                        id="pin"
+                        maxlength="6"
+                        placeholder=" "
+                        required
+                    >
+
+                    <label>
+                        PIN code
+                    </label>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="section-title">
+
+                <span class="section-number">
+                    03
+                </span>
+
+                <h3>
+                    Country
+                </h3>
+
+            </div>
+
+
+
+            <div class="field">
+
+                <input
+                    type="text"
+                    id="country"
+                    value="India"
+                    readonly
+                >
+
+                <label
+                    style="
+                        top:2px;
+                        font-size:12px;
+                        color:#624638;
+                        font-weight:700;
+                    "
+                >
+                    Country
+                </label>
+
+            </div>
+
+
+
+            <div class="navigation">
+
+
+                <div class="required">
+
+                    <span>*</span>
+                    Required fields
+
+                </div>
+
+
+
+                <div class="buttons">
+
+
+                    <button
+                        type="button"
+                        class="btn btn-back"
+                        onclick="previousStep()"
+                    >
+
+                        ← Back
+
+                    </button>
+
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-next"
+                    >
+
+                        Save Details
+
+                        <span class="arrow">
+                            ✓
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </form>
+
+
+
+    <!-- =================================================
+         SUCCESS
+    ================================================= -->
+
+    <div
+        class="success"
+        id="success"
+    >
+
+
+        <div class="success-icon">
+
+            ✓
+
+        </div>
+
+
+        <h2>
+
+            Details Saved
+
+        </h2>
+
+
+        <p>
+
+            Your personal information has been
+            successfully submitted.
+
+        </p>
+
+
+
+        <div class="success-buttons">
+
+
+            <button
+                type="button"
+                class="btn edit-btn"
+                onclick="editDetails()"
+            >
+
+                ← Edit Details
+
+            </button>
+
+
+
+            <button
+                type="button"
+                class="btn done-btn"
+                onclick="finishForm()"
+            >
+
+                Done
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   CURRENT STEP
+===================================================== */
+
+let currentStep = 1;
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const formSteps =
+    document.querySelectorAll(".form-step");
+
+const sideSteps =
+    document.querySelectorAll(".step");
+
+const stepLabel =
+    document.getElementById("stepLabel");
+
+const stepTitle =
+    document.getElementById("stepTitle");
+
+const stepDescription =
+    document.getElementById("stepDescription");
+
+const progressBar =
+    document.getElementById("progressBar");
+
+const profileForm =
+    document.getElementById("profileForm");
+
+const header =
+    document.getElementById("header");
+
+const success =
+    document.getElementById("success");
+
+
+/* =====================================================
+   STEP INFORMATION
+===================================================== */
+
+const stepInfo = {
+
+    1: {
+
+        title: "Personal Details",
+
+        description:
+            "Let's start with some basic information."
+
+    },
+
+    2: {
+
+        title: "Contact Information",
+
+        description:
+            "Tell us how we can get in touch with you."
+
+    },
+
+    3: {
+
+        title: "Address",
+
+        description:
+            "Finally, tell us where you currently live."
+
+    }
+
+};
+
+
+/* =====================================================
+   SHOW STEP
+===================================================== */
+
+function showStep(step) {
+
+    currentStep = step;
+
+
+    formSteps.forEach(function(section) {
+
+        section.classList.remove("active");
+
+
+        if (
+            Number(section.dataset.formStep) === step
+        ) {
+
+            section.classList.add("active");
+
+        }
+
+    });
+
+
+    sideSteps.forEach(function(item) {
+
+        const number =
+            Number(item.dataset.step);
+
+
+        item.classList.remove("active");
+
+        item.classList.remove("completed");
+
+
+        if (number === step) {
+
+            item.classList.add("active");
+
+        }
+
+        else if (number < step) {
+
+            item.classList.add("completed");
+
+        }
+
+    });
+
+
+    stepLabel.textContent =
+        `STEP 0${step} OF 03`;
+
+
+    stepTitle.textContent =
+        stepInfo[step].title;
+
+
+    stepDescription.textContent =
+        stepInfo[step].description;
+
+
+    progressBar.style.width =
+        `${(step / 3) * 100}%`;
+
+
+    document
+        .querySelector(".right")
+        .scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+}
+
+
+/* =====================================================
+   VALIDATION
+===================================================== */
+
+function validateStep() {
+
+    const currentForm =
+        document.querySelector(
+            `.form-step[data-form-step="${currentStep}"]`
+        );
+
+
+    const requiredInputs =
+        currentForm.querySelectorAll(
+            "input[required], select[required], textarea[required]"
+        );
+
+
+    for (let input of requiredInputs) {
+
+        if (!input.value.trim()) {
+
+            input.focus();
+
+            alert(
+                "Please fill in all required fields."
+            );
+
+            return false;
+
+        }
+
+    }
+
+
+    /* Gender */
+
+    if (currentStep === 1) {
+
+        const gender =
+            document.querySelector(
+                'input[name="gender"]:checked'
+            );
+
+
+        if (!gender) {
+
+            alert(
+                "Please select your gender."
+            );
+
+            return false;
+
+        }
+
+    }
+
+
+    /* Email + Phone */
+
+    if (currentStep === 2) {
+
+        const email =
+            document
+                .getElementById("email")
+                .value
+                .trim();
+
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+        if (!emailPattern.test(email)) {
+
+            alert(
+                "Please enter a valid email address."
+            );
+
+            return false;
+
+        }
+
+
+        const phone =
+            document
+                .getElementById("phone")
+                .value
+                .trim();
+
+
+        if (phone.length !== 10) {
+
+            alert(
+                "Please enter a valid 10-digit phone number."
+            );
+
+            return false;
+
+        }
+
+    }
+
+
+    /* PIN */
+
+    if (currentStep === 3) {
+
+        const pin =
+            document
+                .getElementById("pin")
+                .value
+                .trim();
+
+
+        if (pin.length !== 6) {
+
+            alert(
+                "Please enter a valid 6-digit PIN code."
+            );
+
+            return false;
+
+        }
+
+    }
+
+
+    return true;
+
+}
+
+
+/* =====================================================
+   NEXT
+===================================================== */
+
+function nextStep() {
+
+    if (!validateStep()) {
+
+        return;
+
+    }
+
+
+    if (currentStep < 3) {
+
+        showStep(currentStep + 1);
+
+    }
+
+}
+
+
+/* =====================================================
+   BACK
+===================================================== */
+
+function previousStep() {
+
+    if (currentStep > 1) {
+
+        showStep(currentStep - 1);
+
+    }
+
+}
+
+
+/* =====================================================
+   PHONE
+===================================================== */
+
+document
+    .getElementById("phone")
+    .addEventListener(
+        "input",
+        function() {
+
+            this.value =
+                this.value.replace(/\D/g, "");
+
+        }
+    );
+
+
+document
+    .getElementById("alternatePhone")
+    .addEventListener(
+        "input",
+        function() {
+
+            this.value =
+                this.value.replace(/\D/g, "");
+
+        }
+    );
+
+
+/* =====================================================
+   PIN
+===================================================== */
+
+document
+    .getElementById("pin")
+    .addEventListener(
+        "input",
+        function() {
+
+            this.value =
+                this.value.replace(/\D/g, "");
+
+        }
+    );
+
+
+/* =====================================================
+   PHOTO UPLOAD
+===================================================== */
+
+document
+    .getElementById("photo")
+    .addEventListener(
+        "change",
+        function() {
+
+            const file = this.files[0];
+
+
+            if (!file) {
+
+                return;
+
+            }
+
+
+            if (
+                file.size >
+                5 * 1024 * 1024
+            ) {
+
+                alert(
+                    "Please select an image smaller than 5MB."
+                );
+
+                this.value = "";
+
+                return;
+
+            }
+
+
+            if (
+                !file.type.startsWith("image/")
+            ) {
+
+                alert(
+                    "Please select a valid image."
+                );
+
+                this.value = "";
+
+                return;
+
+            }
+
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload =
+                function(event) {
+
+                    document
+                        .getElementById("photoCircle")
+                        .innerHTML =
+                        `<img src="${event.target.result}" alt="Profile photo">`;
+
+                };
+
+
+            reader.readAsDataURL(file);
+
+        }
+    );
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+profileForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        if (!validateStep()) {
+
+            return;
+
+        }
+
+
+        profileForm.style.display =
+            "none";
+
+
+        header.style.display =
+            "none";
+
+
+        success.classList.add(
+            "active"
+        );
+
+    }
+);
+
+
+/* =====================================================
+   EDIT DETAILS
+===================================================== */
+
+function editDetails() {
+
+    success.classList.remove(
+        "active"
+    );
+
+
+    profileForm.style.display =
+        "block";
+
+
+    header.style.display =
+        "flex";
+
+
+    showStep(1);
+
+}
+
+
+/* =====================================================
+   DONE
+===================================================== */
+
+function finishForm() {
+
+    alert(
+        "Your details have been successfully saved!"
+    );
+
+}
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+showStep(1);
+
+</script>
+
+</body>
+
+</html>
